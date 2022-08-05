@@ -46,7 +46,7 @@ Windows:
 <comando_de_instalação>
 ```-->
 
-## ☕ Clonando o Projeto <Algoritmos e Estruturas de Dados I>
+## ☕ Clonando o Projeto Algoritmos e Estruturas de Dados I
 
 Para usar este projeto localmente, siga estas etapas:
 
@@ -54,9 +54,9 @@ Para usar este projeto localmente, siga estas etapas:
 git clone https://github.com/edutrindade/Algoritmos-e-Estruturas-de-Dados-I
 ```
 
-## 📫 Contribuindo para <Algoritmos e Estruturas de Dados I>
+## 📫 Contribuindo para Algoritmos e Estruturas de Dados I
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
-Para contribuir com <Algoritmos-e-Estruturas-de-Dados-I>, siga estas etapas:
+Para contribuir com Algoritmos-e-Estruturas-de-Dados-I, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
