@@ -3,23 +3,17 @@ Conteúdo semestral de AEDS I
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
-
 <img src="http://jogoveio.com.br/wp-content/uploads/2018/04/computador-charge-jogoveio.png" alt="imagem">
 
-> Este repositório tem por objetivo atender às turmas de Algoritmos e Estruturas de Dados I, fornecendo resoluções de exercícios resolvidos em aula e estruturas de dados para consulta e execução dos Trabalhos Práticos.
+> Este repositório visa atender às turmas de Algoritmos e Estruturas de Dados I, fornecendo resoluções de exercícios resolvidos em aula e estruturas de dados para consulta e execução dos Trabalhos Práticos.
 
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Demais atualizações serão especificadas nas seguintes tarefas:
 
 - [x] Revisão
-- [x] Arquivos
-- [x] Ponteiros
+- [ ] Arquivos
+- [ ] Ponteiros
 - [ ] Lista
 - [ ] Pilha
 - [ ] Fila
