@@ -32,7 +32,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 * Você instalou e configurou adequadamente o Ambiente de Desenvolvimento (compilador, editor de texto, etc.) `<MinGW / Visual Studio Code>`.
 * Ter os conhecimentos básicos necessários em `<Git / Github>`.
 
-## 🚀 Instalando <nome_do_projeto>
+<!--## 🚀 Instalando <nome_do_projeto>
 
 Para instalar o <nome_do_projeto>, siga estas etapas:
 
@@ -44,7 +44,7 @@ Linux e macOS:
 Windows:
 ```
 <comando_de_instalação>
-```
+```-->
 
 ## ☕ Clonando o Projeto <Algoritmos e Estruturas de Dados I>
 
