@@ -12,7 +12,7 @@ Conteúdo semestral de AEDS I
 O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Demais atualizações serão especificadas nas seguintes tarefas:
 
 - [x] Revisão
-- [ ] Arquivos
+- [x] Arquivos
 - [ ] Ponteiros
 - [ ] Lista
 - [ ] Pilha
