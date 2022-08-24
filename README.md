@@ -80,8 +80,20 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/52547320?v=4" width="100px;" alt="Foto do Erick Sena"/><br>
+        <sub>
+          <b>Erick Sena</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
+
+
+
+
 
 
 ## 😄 Seja um dos contribuidores<br>
