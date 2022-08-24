@@ -13,11 +13,11 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 
 - [x] Revisão
 - [x] Arquivos
-- [ ] Ponteiros
+- [x] Ponteiros
+- [x] Alocação Estática e Dinâmica de Memória
 - [ ] Lista
 - [ ] Pilha
 - [ ] Fila
-- [ ] Alocação Estática e Dinâmica de Memória
 - [ ] Lista Encadeada
 - [ ] Lista Duplamente Encadeada
 - [ ] Pilha com Ponteiro
@@ -73,7 +73,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/edutrindade">
         <img src="https://avatars.githubusercontent.com/u/39175147?s=96&v=4" width="100px;" alt="Foto do Eduardo Trindade"/><br>
         <sub>
           <b>Eduardo Trindade</b>
@@ -81,7 +81,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/ErickSenaGodinho">
         <img src="https://avatars.githubusercontent.com/u/52547320?v=4" width="100px;" alt="Foto do Erick Sena"/><br>
         <sub>
           <b>Erick Sena</b>
@@ -90,10 +90,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
-
-
-
 
 
 ## 😄 Seja um dos contribuidores<br>
