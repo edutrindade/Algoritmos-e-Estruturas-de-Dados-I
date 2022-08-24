@@ -7,27 +7,35 @@ typedef struct Pessoa
     float salario;
     int idade;
     int nFilhos;
-    int sexo; //0 -> masculino, 1 -> feminino
+    int sexo; // 0 -> masculino, 1 -> feminino
 };
 
 const int totalPessoas = 3; // Constante -> alternativa ao DEFINE
 
+Pessoa cadastraPessoa()
+{
+    Pessoa pessoa;
+    cout << "Salário: ";
+    cin >> pessoa.salario;
+    cout << "Idade: ";
+    cin >> pessoa.idade;
+    cout << "Número de filhos: ";
+    cin >> pessoa.nFilhos;
+    do
+    {
+        cout << "Sexo (0 -> M, 1 -> F): ";
+        cin >> pessoa.sexo;
+    } while (pessoa.sexo != 0 && pessoa.sexo != 1);
+    return pessoa;
+}
+
 void coletaDados(Pessoa p[])
-{  
+{
     cout << "CADASTRO DE DADOS DO MUNICÍPIO\n\n";
     for (int i = 0; i < totalPessoas; i++)
     {
         cout << "\nPessoa n -> " << (i + 1) << endl;
-        cout << "Salário: ";
-        cin >> p[i].salario;
-        cout << "Idade: ";
-        cin >> p[i].idade;
-        cout << "Número de filhos: ";
-        cin >> p[i].nFilhos;
-        do {
-            cout << "Sexo (0 -> M, 1 -> F): ";
-            cin >> p[i].sexo;
-        } while (p[i].sexo != 0 && p[i].sexo != 1);
+        p[i] = cadastraPessoa();
     }
 }
 
@@ -58,7 +66,7 @@ int main()
             }
         }
     }
-    
+
     mediaSalario /= totalPessoas;
     mediaFilhos /= totalPessoas;
 

@@ -1,10 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <windows.h>
- 
+
 using namespace std;
- 
-int main() {
+
+int main()
+{
     UINT CPAGE_UTF8 = 65001;
     SetConsoleOutputCP(CPAGE_UTF8);
 
@@ -13,22 +14,30 @@ int main() {
     ifstream arquivo;
     arquivo.open("cores.txt");
 
-    if (!arquivo.is_open()) {
+    if (!arquivo.is_open())
+    {
         cerr << "ERRO! Não foi possível abrir o arquivo.\n";
         arquivo.clear();
-    } else {
-        cout << "Arquivo aberto com sucesso!\n";
+        return -1;
     }
 
-    while (!arquivo.eof()) {
+    cout << "Arquivo aberto com sucesso!\n";
+
+    while (!arquivo.eof())
+    {
         char letra;
         arquivo >> letra;
 
-        if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U') {
+        if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U')
+        {
             vogais++;
-        } else if (letra != '#') {
+        }
+        else if (letra != '#')
+        {
             consoantes++;
-        } else {
+        }
+        else
+        {
             caracteres_especiais++;
         }
     }
