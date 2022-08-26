@@ -5,6 +5,14 @@
 
 using namespace std;
 
+void Cadastro(TipoItem *aluno) {
+    system("cls");
+    cout << "--------------------------------"
+    cout << "        Cadastro de Aluno       " << endl;
+    cout << "--------------------------------"
+
+}
+
 int main()
 {
     UINT CPAGE_UTF8 = 65001;
@@ -12,20 +20,21 @@ int main()
     SetConsoleOutputCP(CPAGE_UTF8);
 
     TipoLista lista;
-    TipoItem item;
+    TipoItem aluno;
     int opcao, ret;
+    char turma;
 
     do
     {
         system("cls");
-        cout << "TAD Lista com Vetor \n";
-        cout << "1. Criar Lista\n";
-        cout << "2. Verifica Lista Vazia\n";
-        cout << "3. Verifica Lista Cheia\n";
-        cout << "4. Insere Item\n";
-        cout << "5. Imprime Lista\n";
-        cout << "6. Pesquisa Item\n";
-        cout << "7. Retira Item\n";
+        cout << "Turmas \n\n";
+        cout << "1. Criar Turma\n";
+        cout << "2. Verifica Turma Vazia\n";
+        cout << "3. Verifica Turma Cheia\n";
+        cout << "4. Cadastro de Aluno\n";
+        cout << "5. Imprime Turma\n";
+        cout << "6. Pesquisa Aluno\n";
+        cout << "7. Remove Aluno\n";
         cout << "0. Sair\n\n";
         cout << "Opção: ";
         cin >> opcao;
@@ -50,9 +59,9 @@ int main()
             Sleep(1500);
             break;
         case 4:
-            cout << "Chave: ";
-            cin >> item.chave;
-            ret = InsereItem(&lista, item);
+            // Função de cadastro
+            Cadastro(aluno);
+            ret = InsereItem(&lista, aluno);
             if (ret == 1)
             {
                 cout << "Número inserido com sucesso!";
@@ -75,9 +84,9 @@ int main()
         case 6:
             if (listaCriada)
             {
-                cout << "Chave: ";
-                cin >> item.chave;
-                ret = PesquisaItem(&lista, item.chave);
+                cout << "matricula: ";
+                cin >> aluno.matricula;
+                ret = PesquisaItem(&lista, aluno.matricula);
                 if (ret >= 0)
                 {
                     cout << "Número encontrado na posição " << ret;
@@ -98,15 +107,15 @@ int main()
         case 7:
             if (listaCriada)
             {
-                cout << "Chave: ";
-                cin >> item.chave;
-                ret = PesquisaItem(&lista, item.chave);
+                cout << "matricula: ";
+                cin >> aluno.matricula;
+                ret = PesquisaItem(&lista, aluno.matricula);
                 if (ret >= 0)
                 {
                     cout << "Número encontrado na posição " << ret;
                     Sleep(1000);
                     cout << "\n\nRemovendo...";
-                    RetiraItem(ret, &lista, &item);
+                    RetiraItem(ret, &lista, &aluno);
                     Sleep(1000);
                 }
                 else
