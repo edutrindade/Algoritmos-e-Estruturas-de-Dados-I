@@ -27,15 +27,7 @@ int main()
     do
     {
         system("cls");
-        cout << "Turmas \n\n";
-        cout << "1. Criar Turma\n";
-        cout << "2. Verifica Turma Vazia\n";
-        cout << "3. Verifica Turma Cheia\n";
-        cout << "4. Cadastro de Aluno\n";
-        cout << "5. Imprime Turma\n";
-        cout << "6. Pesquisa Aluno\n";
-        cout << "7. Remove Aluno\n";
-        cout << "0. Sair\n\n";
+        menu();
         cout << "Opção: ";
         cin >> opcao;
 
