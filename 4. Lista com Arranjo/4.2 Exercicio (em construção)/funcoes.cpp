@@ -6,6 +6,18 @@
 
 using namespace std;
 
+void menu()
+{
+        cout << "Turmas \n\n";
+        cout << "1. Criar Turma\n";
+        cout << "2. Verifica Turma Vazia\n";
+        cout << "3. Verifica Turma Cheia\n";
+        cout << "4. Cadastro de Aluno\n";
+        cout << "5. Imprime Turma\n";
+        cout << "6. Pesquisa Aluno\n";
+        cout << "7. Remove Aluno\n";
+        cout << "0. Sair\n\n";    
+}
 void CriaListaVazia(TipoLista *lista)
 {
     if (!listaCriada)
