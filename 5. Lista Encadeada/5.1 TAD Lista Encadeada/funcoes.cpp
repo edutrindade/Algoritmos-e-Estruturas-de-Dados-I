@@ -180,24 +180,6 @@ void RemoveListaUltimo(TipoLista *lista)
     lista->tamanho--;
 }
 
-// void RemoveItemPorId(TipoLista *lista, int id)
-// {
-//     Apontador aux, atual;
-//     atual = lista->primeiro->prox;
-//     while (atual->prox != NULL)
-//     {
-//         if (atual->prox->item.id == id)
-//         {
-//             aux = atual->prox;
-//             atual->prox = aux->prox;
-//             delete aux;
-//             lista->tamanho--;
-//             break;
-//         }
-//         atual = atual->prox;
-//     }
-// }
-
 void RemoveItemPorId(TipoLista *lista, int id)
 {
     if (VerificaListaVazia(lista))
