@@ -15,10 +15,10 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 - [x] Arquivos
 - [x] Ponteiros
 - [x] Alocação Estática e Dinâmica de Memória
-- [ ] Lista
+- [x] Lista
+- [ ] Lista Encadeada
 - [ ] Pilha
 - [ ] Fila
-- [ ] Lista Encadeada
 - [ ] Lista Duplamente Encadeada
 - [ ] Pilha com Ponteiro
 - [ ] Fila com Ponteiro
