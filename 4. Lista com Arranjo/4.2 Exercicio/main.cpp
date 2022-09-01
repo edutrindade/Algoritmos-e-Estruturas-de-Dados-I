@@ -5,12 +5,36 @@
 
 using namespace std;
 
-void Cadastro(TipoItem *aluno) {
+void Menu()
+{
     system("cls");
-    cout << "--------------------------------"
-    cout << "        Cadastro de Aluno       " << endl;
-    cout << "--------------------------------"
+    cout << "--------------------------------\n";
+    cout << "        Cadastro de Alunos       \n";
+    cout << "--------------------------------\n";
+    cout << "1. Criar Lista\n";
+    cout << "2. Verifica Lista Vazia\n";
+    cout << "3. Verifica Lista Cheia\n";
+    cout << "4. Cadastro de Aluno\n";
+    cout << "5. Imprime por Turma\n";
+    cout << "6. Pesquisa Aluno\n";
+    cout << "7. Remove Aluno\n";
+    cout << "0. Sair\n\n";
+}
 
+void Cadastro(TipoItem *aluno)
+{
+    cout << "Nome: ";
+    cin >> aluno->nome;
+    cout << "Matricula: ";
+    cin >> aluno->matricula;
+    cout << "Turma: ";
+    cin >> aluno->turma;
+    cout << "P1: ";
+    cin >> aluno->p1;
+    cout << "P2: ";
+    cin >> aluno->p2;
+    cout << "P3: ";
+    cin >> aluno->p3;
 }
 
 int main()
@@ -27,7 +51,7 @@ int main()
     do
     {
         system("cls");
-        menu();
+        Menu();
         cout << "Opção: ";
         cin >> opcao;
 
@@ -52,16 +76,16 @@ int main()
             break;
         case 4:
             // Função de cadastro
-            Cadastro(aluno);
+            Cadastro(&aluno);
             ret = InsereItem(&lista, aluno);
             if (ret == 1)
             {
-                cout << "Número inserido com sucesso!";
+                cout << "Aluno cadastrado com sucesso!";
                 Sleep(500);
             }
             else if (ret == -1)
             {
-                cerr << "ERRO ao inserir o número. Lista cheia.";
+                cerr << "ERRO ao cadastrar o aluno. Lista cheia.";
                 Sleep(1000);
             }
             else
@@ -71,22 +95,35 @@ int main()
             }
             break;
         case 5:
-            ImprimeLista(lista);
+            if (listaCriada)
+            {
+                char turma;
+                cout << "Turma: ";
+                cin >> turma;
+                ImprimeTurma(&lista, turma);
+            }
+            else
+            {
+                cout << "Crie a lista primeiramente.";
+                Sleep(1000);
+            }
             break;
         case 6:
             if (listaCriada)
             {
-                cout << "matricula: ";
-                cin >> aluno.matricula;
-                ret = PesquisaItem(&lista, aluno.matricula);
+                char matricula[12];
+                cout << "Matricula: ";
+                cin >> matricula;
+                ret = PesquisaItem(&lista, matricula);
                 if (ret >= 0)
                 {
-                    cout << "Número encontrado na posição " << ret;
+                    cout << "Matrícula encontrada na posição " << ret << endl;
                     Sleep(1000);
+                    ImprimeItem(&lista, ret);
                 }
                 else
                 {
-                    cout << "O número não está na lista.";
+                    cout << "A matrícula não está cadastrada.";
                     Sleep(1000);
                 }
             }
@@ -99,12 +136,13 @@ int main()
         case 7:
             if (listaCriada)
             {
-                cout << "matricula: ";
-                cin >> aluno.matricula;
-                ret = PesquisaItem(&lista, aluno.matricula);
+                char matricula[12];
+                cout << "Matricula: ";
+                cin >> matricula;
+                ret = PesquisaItem(&lista, matricula);
                 if (ret >= 0)
                 {
-                    cout << "Número encontrado na posição " << ret;
+                    cout << "Matrícula encontrada na posição " << ret;
                     Sleep(1000);
                     cout << "\n\nRemovendo...";
                     RetiraItem(ret, &lista, &aluno);
@@ -112,7 +150,7 @@ int main()
                 }
                 else
                 {
-                    cout << "O número não está na lista.";
+                    cout << "A matrícula não está cadastrada.";
                     Sleep(1000);
                 }
             }

@@ -8,7 +8,7 @@ typedef int TipoApontador;
 typedef struct TipoItem
 {
     char nome[81];
-    char matricula[8];
+    char matricula[12];
     char turma;
     float p1, p2, p3;
 };
@@ -27,9 +27,10 @@ int VerificaListaVazia(TipoLista *lista);                           // Retorna T
 int VerificaListaCheia(TipoLista *lista);                           // Retorna TRUE se a lista estiver cheia, FALSE caso contrário
 int InsereItem(TipoLista *lista, TipoItem item);                    // Insere ITEM (chave) na lista TipoLista
 void ImprimeLista(TipoLista lista);                                 // Imprime a lista
-int PesquisaItem(TipoLista *lista, int chave);                      // Pesquisa um ITEM (chave) na lista TipoLista
+int PesquisaItem(TipoLista *lista, char matricula[]);               // Pesquisa um aluno pela matrícula
 void RetiraItem(TipoApontador p, TipoLista *lista, TipoItem *item); // Remove um item da lista pela sua posição
 int TamanhoLista(TipoLista *lista);                                 // Retorna o número de itens da lista
-void ImprimeTurma (TipoLista turmas, char turma);                  // EM CONSTRUÇÃO
+void ImprimeItem(TipoLista *lista, int posicao);
+void ImprimeTurma(TipoLista turmas, char turma);
 
 #endif
