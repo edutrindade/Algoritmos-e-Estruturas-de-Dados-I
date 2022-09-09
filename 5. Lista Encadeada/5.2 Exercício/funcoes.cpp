@@ -13,7 +13,6 @@ void CriaListaVazia(TipoLista *lista)
         lista->primeiro = new TipoElemento;
         lista->ultimo = lista->primeiro;
         lista->ultimo->prox = NULL;
-        cout << "Lista criada com sucesso!";
         listaCriada = true;
     }
     else
@@ -31,17 +30,6 @@ bool VerificaListaVazia(TipoLista *lista)
 int TamanhoLista(TipoLista *lista)
 {
     return lista->tamanho;
-}
-
-void InsereListaPrimeiro(TipoLista *lista, TipoItem *item)
-{
-    Apontador aux;
-    aux = lista->primeiro->prox;
-    lista->primeiro->prox = new TipoElemento;
-    lista->primeiro->prox->prox = aux;
-    lista->primeiro->prox->item = *item;
-    lista->tamanho++;
-    AtualizaUltimo(lista);
 }
 
 void AtualizaUltimo(TipoLista *lista)
@@ -64,36 +52,36 @@ void InsereListaUltimo(TipoLista *lista, TipoItem *item)
     lista->tamanho++;
 }
 
-void InsereListaAposElemento(TipoLista *lista, TipoItem *item, int id)
-{
-    Apontador aux, pAux, x;
-    bool find = false;
-    pAux = lista->primeiro->prox;
-    while (pAux != NULL)
-    {
-        if (pAux->item.id == id)
-        {
-            find = true;
-            x = pAux;
-            aux = x->prox;
-            x->prox = new TipoElemento;
-            x->prox->prox = aux;
-            x->prox->item = *item;
-            break;
-        }
-        pAux = pAux->prox; /* próxima célula */
-    }
-    if (find)
-    {
-        cout << "Item inserido com sucesso!";
-        AtualizaUltimo(lista);
-        lista->tamanho++;
-    }
-    else
-    {
-        cout << "Elemento anterior não encontrado na lista.";
-    }
-}
+// void InsereListaAposElemento(TipoLista *lista, TipoItem *item, int id)
+// {
+//     Apontador aux, pAux, x;
+//     bool find = false;
+//     pAux = lista->primeiro->prox;
+//     while (pAux != NULL)
+//     {
+//         if (pAux->item.id == id)
+//         {
+//             find = true;
+//             x = pAux;
+//             aux = x->prox;
+//             x->prox = new TipoElemento;
+//             x->prox->prox = aux;
+//             x->prox->item = *item;
+//             break;
+//         }
+//         pAux = pAux->prox; /* próxima célula */
+//     }
+//     if (find)
+//     {
+//         cout << "Item inserido com sucesso!";
+//         AtualizaUltimo(lista);
+//         lista->tamanho++;
+//     }
+//     else
+//     {
+//         cout << "Elemento anterior não encontrado na lista.";
+//     }
+// }
 
 void ImprimeLista(TipoLista lista)
 {
@@ -107,40 +95,60 @@ void ImprimeLista(TipoLista lista)
     aux = lista.primeiro->prox;
     while (aux != NULL)
     {
-        cout << "ID: " << aux->item.id << endl;
-        cout << "Nome: " << aux->item.nome << endl
-             << endl;
+        cout << "Nome: " << aux->item.nome << endl;
+        cout << "Telefone: " << aux->item.telefone << endl;
+        cout << "Celular: " << aux->item.celular << endl;
+        cout << "Email: " << aux->item.email << endl;
+        cout << "Aniversario: " << aux->item.aniversario.dia << "/" << aux->item.aniversario.mes << endl;
         aux = aux->prox;
     }
     system("pause");
 }
 
-int PesquisaItem(TipoLista *lista, int id)
+bool PesquisaItem(TipoLista *lista, char nome[])
 {
     Apontador aux;
     aux = lista->primeiro->prox;
     while (aux != NULL)
     {
-        if (aux->item.id == id)
+        if (strcmp(aux->item.nome, nome) == 0)
         {
-            return aux->item.id;
+            return true;
         }
         aux = aux->prox;
     }
-    return -1;
+    return false;
 }
 
-void ImprimeItem(TipoLista *lista, int id)
+int Atualiza(TipoLista *lista, TipoItem item, char nome[])
 {
     Apontador aux;
     aux = lista->primeiro->prox;
     while (aux != NULL)
     {
-        if (aux->item.id == id)
+        if (strcmp(aux->item.nome, item.nome) == 0)
         {
-            cout << "ID: " << aux->item.id << endl;
-            cout << "Nome: " << aux->item.nome << endl
-                 << endl;
+            strcpy(aux->item.nome, nome);
+            return 1;
+        }
+        aux = aux->prox;
+    }
+    return 0;
+}
+
+void ImprimeItem(TipoLista *lista, char nome[])
+{
+    Apontador aux;
+    aux = lista->primeiro->prox;
+    while (aux != NULL)
+    {
+        if (strcmp(aux->item.nome, nome) == 0)
+        {
+            // cout << "Nome: " << aux->item.nome << endl;
+            cout << "Telefone: " << aux->item.telefone << endl;
+            cout << "Celular: " << aux->item.celular << endl;
+            cout << "Email: " << aux->item.email << endl;
+            cout << "Aniversario: " << aux->item.aniversario.dia << "/" << aux->item.aniversario.mes << endl;
             break;
         }
         aux = aux->prox;
@@ -179,7 +187,7 @@ void RemoveListaUltimo(TipoLista *lista)
     lista->tamanho--;
 }
 
-void RemoveItemPorId(TipoLista *lista, int id)
+void RemoveItemPorNome(TipoLista *lista, char nome[])
 {
     if (VerificaListaVazia(lista))
     {
@@ -188,19 +196,19 @@ void RemoveItemPorId(TipoLista *lista, int id)
 
     Apontador aux, anterior, x;
 
+    aux = lista->primeiro->prox;
+
     x = lista->primeiro;
 
     while (x != NULL)
     {
-        if (x->prox->item.id == id)
+        if (strcmp(aux->item.nome, nome) == 0)
         {
-            anterior = x;
+            anterior->prox = aux->prox;
+            delete aux;
+            lista->tamanho--;
             break;
         }
         x = x->prox;
     }
-    aux = anterior->prox;
-    anterior->prox = aux->prox;
-    delete aux;
-    lista->tamanho--;
 }
