@@ -22,14 +22,25 @@ void Escolher()
 {
     system("cls");
     cout << "--------------------------------\n";
-    cout << "        Opção editar      \n";
+    cout << "             EDIÇÃO             \n";
     cout << "--------------------------------\n";
     cout << "1. Nome\n";
     cout << "2. Telefone\n";
     cout << "3. Celular\n";
-    cout << "4. Email\n";
+    cout << "4. E-mail\n";
     cout << "5. Aniversário\n";
-    cout << "0. Sair\n";
+    cout << "0. Voltar\n";
+}
+
+void Busca()
+{
+    system("cls");
+    cout << "--------------------------------\n";
+    cout << "       PESQUISAR CONTATO        \n";
+    cout << "--------------------------------\n";
+    cout << "1. ID\n";
+    cout << "2. Nome\n";
+    cout << "0. Voltar\n";
 }
 
 bool VerificaMes(int mes)
@@ -56,6 +67,86 @@ bool VerificaDia(int dia, int mes)
         return false;
     }
     return true;
+}
+
+void Edicao(TipoLista *lista, TipoItem item)
+{
+    char op;
+    cout << "\n--------------------------------\n";
+    cout << "Deseja editar o contato? (s/n): ";
+    cin >> op;
+    int escolher;
+    if (op == 'S' || op == 's')
+    {
+        do
+        {
+            char nome[30], telefone[15], celular[15], email[40];
+            int dia, mes;
+
+            Escolher();
+            cout << "Opção: ";
+            cin >> escolher;
+            switch (escolher)
+            {
+            case 1:
+                cout << "\nNome: " << item.nome << " -> ";
+                cin >> nome;
+                Atualiza(lista, item, nome, 1);
+                cout << "\nNome atualizado com sucesso!\n";
+                system("PAUSE");
+                break;
+            case 2:
+                cout << "\nTelefone: " << item.telefone << " -> ";
+                cin >> telefone;
+                Atualiza(lista, item, telefone, 2);
+                cout << "\nTelefone atualizado com sucesso!\n";
+                system("PAUSE");
+                break;
+            case 3:
+                cout << "\nCelular: " << item.celular << " -> ";
+                cin >> celular;
+                Atualiza(lista, item, celular, 3);
+                cout << "\nCelular atualizado com sucesso!\n";
+                system("PAUSE");
+                break;
+            case 4:
+                cout << "E-mail: " << item.email << " -> ";
+                cin >> email;
+                Atualiza(lista, item, email, 4);
+                cout << "\nE-mail atualizado com sucesso!\n";
+                system("PAUSE");
+                break;
+            case 5:
+                cout << "\nData de aniversário\n";
+                do
+                {
+                    cout << "Mês: " << item.aniversario.mes << " -> ";
+                    cin >> mes;
+                    if (!VerificaMes(mes))
+                    {
+                        cout << "\nMês inválido!\n";
+                        Sleep(1500);
+                    }
+                } while (!VerificaMes(mes));
+                do
+                {
+                    cout << "Dia: " << item.aniversario.dia << " -> ";
+                    cin >> dia;
+                    if (!VerificaDia(dia, mes))
+                    {
+                        cout << "\nO mês " << mes << " não possui o dia " << dia << ".\n";
+                        Sleep(1500);
+                    }
+                } while (!VerificaDia(dia, mes));
+                AtualizaAniversario(lista, item, dia, mes);
+                cout << "\nData de aniversário atualizada com sucesso!\n";
+                system("PAUSE");
+                break;
+            default:
+                break;
+            }
+        } while (escolher != 0);
+    }
 }
 
 int main()
@@ -88,8 +179,9 @@ int main()
             cout << "Novo contato\n";
             cout << "--------------------------------\n";
             cout << "Nome: ";
-            strcpy(item.nome, "Eduardo");
-            // cin >> item.nome;
+            item.id = id;
+            // strcpy(item.nome, "Eduardo");
+            cin >> item.nome;
             cout << "Telefone: ";
             strcpy(item.telefone, "(38)999705297");
             // cin >> item.telefone;
@@ -136,40 +228,50 @@ int main()
             cout << "--------------------------------\n";
             cout << "        AGENDA TELEFÔNICA       \n";
             cout << "--------------------------------\n";
-            cout << "Buscar contato\n";
-            cout << "--------------------------------\n";
-            cout << "Nome: ";
-            cin >> item.nome;
-            if (PesquisaItem(&lista, item.nome))
+            int opcaoBusca, cod;
+            char nome[30];
+            do
             {
-                ImprimeItem(&lista, item.nome);
-                cout << "\n--------------------------------\n";
-                cout << "Deseja editar o contato? (s/n): ";
-                cin >> op;
-                if (op == 'S' || op == 's')
+                Busca();
+                cout << "\nOpção: ";
+                cin >> opcaoBusca;
+                switch (opcaoBusca)
                 {
-                    char nome[30];
-                    int escolher;
-                    Escolher();
-                    cout << "Opção: ";
-                    cin >> escolher;
-                    switch (escolher)
+                case 1:
+                    cout << "ID: ";
+                    cin >> cod;
+                    if (PesquisaItemPorId(&lista, cod))
                     {
-                    case 1:
-                        cout << "Nome: ";
-                        cin >> nome;
-                        Atualiza(&lista, item, nome);
-                        break;
-
-                    default:
-                        break;
+                        cout << endl;
+                        ImprimeItemPorId(&lista, cod);
+                        Edicao(&lista, item);
                     }
+                    else
+                    {
+                        cout << "Contato não encontrado!\n";
+                        system("PAUSE");
+                    }
+                    break;
+                case 2:
+                    cout << "Nome: ";
+                    cin >> nome;
+                    if (PesquisaItem(&lista, nome))
+                    {
+                        cout << endl;
+                        ImprimeItem(&lista, nome);
+                        Edicao(&lista, item);
+                    }
+                    else
+                    {
+                        cout << "Contato não encontrado!\n";
+                        system("PAUSE");
+                    }
+                    break;
+                default:
+                    break;
                 }
-            }
-            else
-            {
-                cout << "Contato não encontrado!\n";
-            }
+            } while (opcaoBusca != 0);
+
             system("PAUSE");
             break;
         case 4:
@@ -179,19 +281,19 @@ int main()
             cout << "--------------------------------\n";
             cout << "Excluir contato\n";
             cout << "--------------------------------\n";
-            cout << "Nome: ";
-            cin >> item.nome;
-            if (PesquisaItem(&lista, item.nome))
+            unsigned int codigo;
+            cout << "ID: ";
+            cin >> codigo;
+            if (PesquisaItemPorId(&lista, codigo))
             {
-                ImprimeItem(&lista, item.nome);
+                ImprimeItemPorId(&lista, codigo);
                 cout << "\n--------------------------------\n";
                 cout << "Confirma a exclusão do contato? (s/n): ";
                 cin >> op;
                 if (op == 'S' || op == 's')
                 {
-                    RemoveItemPorNome(&lista, item.nome);
+                    RemoveItemPorId(&lista, codigo);
                     cout << "\nContato excluído com sucesso!\n";
-                    system("PAUSE");
                 }
             }
             else

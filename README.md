@@ -16,7 +16,7 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 - [x] Ponteiros
 - [x] Alocação Estática e Dinâmica de Memória
 - [x] Lista
-- [ ] Lista Encadeada
+- [x] Lista Encadeada
 - [ ] Pilha
 - [ ] Fila
 - [ ] Lista Duplamente Encadeada

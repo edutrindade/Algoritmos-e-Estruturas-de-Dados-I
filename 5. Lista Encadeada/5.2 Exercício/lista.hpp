@@ -9,6 +9,7 @@ typedef struct TipoData
 
 typedef struct TipoItem
 {
+    unsigned int id;
     char nome[40];
     char telefone[15];
     char celular[15];
@@ -32,19 +33,23 @@ typedef struct TipoLista
 } TipoLista;
 
 bool listaCriada = false;
+int id = 1;
 
 void CriaListaVazia(TipoLista *lista);
 bool VerificaListaVazia(TipoLista *lista);
-void InsereListaAposElemento(TipoLista *lista, TipoItem *item, int id);
 void InsereListaUltimo(TipoLista *lista, TipoItem *item);
 void AtualizaUltimo(TipoLista *lista);
 void ImprimeLista(TipoLista lista);
 bool PesquisaItem(TipoLista *lista, char nome[]);
+bool PesquisaItemPorId(TipoLista *lista, int id);
+bool PesquisaItemPorEmail(TipoLista *lista, char email[]);
 void ImprimeItem(TipoLista *lista, char nome[]);
+void ImprimeItemPorId(TipoLista *lista, int id);
 void RemoveListaPrimeiro(TipoLista *lista);
 void RemoveListaUltimo(TipoLista *lista);
-void RemoveItemPorNome(TipoLista *lista, char nome[]);
+void RemoveItemPorId(TipoLista *lista, int id);
 int TamanhoLista(TipoLista *lista);
-int Atualiza(TipoLista *lista, TipoItem item, char nome[]);
+int Atualiza(TipoLista *lista, TipoItem item, char nome[], int campo);
+int AtualizaAniversario(TipoLista *lista, TipoItem item, int dia, int mes);
 
 #endif
