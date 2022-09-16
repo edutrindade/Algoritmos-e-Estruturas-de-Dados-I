@@ -97,10 +97,18 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/gKaicon">
+      <a href="https://github.com/Calebeans">
         <img src="https://avatars.githubusercontent.com/u/93345656?v=4" width="100px;" alt="Foto do Calebe Ribeiro"/><br>
         <sub>
           <b>Calebe Ribeiro</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/DraconiicDragon">
+        <img src="https://avatars.githubusercontent.com/u/104071470?v=4" width="100px;" alt="Foto do Lucas Ferreira"/><br>
+        <sub>
+          <b>Lucas Ferreira</b>
         </sub>
       </a>
     </td>
