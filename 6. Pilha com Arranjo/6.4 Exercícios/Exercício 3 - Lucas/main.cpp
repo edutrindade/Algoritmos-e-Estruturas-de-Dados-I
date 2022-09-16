@@ -63,7 +63,7 @@ int main() {
     Pilha baralho;
     preencheBaralho(&baralho, &listaCartas);
 
-    // imprimePilha(baralho);
+    imprimePilha(baralho);
 
     int jogador1 = 0;
     int jogador2 = 0;
