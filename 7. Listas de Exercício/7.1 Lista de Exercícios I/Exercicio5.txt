@@ -1,0 +1,3 @@
+banana	    50
+cartazes	25
+peixe		90
