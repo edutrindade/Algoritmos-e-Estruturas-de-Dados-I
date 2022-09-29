@@ -17,7 +17,7 @@ int main() {
  
   Livros livros;
   
-  for(int i = 0; i < 2; i++){
+  for(int i = 0; i < 5; i++){
     
     cout<<"Digite o titulo do livro: ";
     cin.getline(livros.titulo,40);
