@@ -47,7 +47,7 @@ void InsereListaPrimeiro(TipoLista *lista, TipoItem *item)
 void AtualizaUltimo(TipoLista *lista)
 {
     Apontador aux;
-    aux = lista->primeiro->prox;
+    aux = lista->primeiro;
     while (aux->prox != NULL)
     {
         aux = aux->prox;
@@ -203,4 +203,5 @@ void RemoveItemPorId(TipoLista *lista, int id)
     anterior->prox = aux->prox;
     delete aux;
     lista->tamanho--;
+    AtualizaUltimo(lista);
 }
