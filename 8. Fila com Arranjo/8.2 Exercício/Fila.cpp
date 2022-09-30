@@ -36,7 +36,7 @@ void Enfileira(TipoFila *fila, TipoItem item)
     fila->fim++;
     fila->itens[fila->fim] = item;
     fila->tamanho++;
-    cout << "Valor enfileirado: " << item.id << endl;
+    cout << "\nNovo atendimento registrado com sucesso!" << endl;
 }
 
 void Desenfileira(TipoFila *fila, TipoItem *item)
@@ -58,16 +58,27 @@ void ExibeFila(TipoFila *fila)
         cout << "Fila vazia.\n";
         return;
     }
-
-    cout << "Fila: ";
     for (int i = fila->inicio; i <= fila->fim; i++)
     {
-        cout << fila->itens[i].id << " ";
+        cout << i + 1 << "º atendimento: \n";
+        cout << "Nome: " << fila->itens[i].nome << "\n";
+        cout << "Telefone: " << fila->itens[i].telefone << "\n";
+        cout << "Solicitação: " << fila->itens[i].solicitacao << "\n";
+        cout << "----------------------------------------\n";
     }
-    cout << endl;
 }
 
 int Tamanho(TipoFila *fila)
 {
     return fila->tamanho;
+}
+
+void Menu()
+{
+    system("cls");
+    cout << "MENU PRINCIPAL\n\n";
+    cout << "1. NOVO ATENDIMENTO\n";
+    cout << "2. LISTAR ATENDIMENTOS\n";
+    cout << "3. PRÓXIMO ATENDIMENTO\n";
+    cout << "4. SAIR\n\n";
 }
