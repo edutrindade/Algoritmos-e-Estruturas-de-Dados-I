@@ -5,7 +5,7 @@
  
 using namespace std;
 
-#define MAXTAM 2
+#define MAXTAM 20
 
 typedef struct{
     int idade;
