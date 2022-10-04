@@ -18,6 +18,6 @@
 
 2. Elabore duas funções para consultar em uma pilha dinâmica a existência de um item. Considere que o item possa ser pesquisado por id (primeira função) ou nome (segunda função), utilizando a TAD vista em aula.
 
-   void ConsultaPorId(TipoPilha *pilha, int id);
+   void ConsultaPorID(TipoPilha *pilha, int id);
 
    void ConsultaPorNome(TipoPilha *pilha, char nome[]);
