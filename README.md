@@ -18,11 +18,12 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 - [x] Lista
 - [x] Lista Encadeada
 - [x] Pilha
-- [ ] Fila
-- [ ] Lista Duplamente Encadeada
+- [x] Fila
 - [ ] Pilha com Ponteiro
 - [ ] Fila com Ponteiro
-
+- [ ] Fila de Prioridade
+- [ ] Fila Circular
+- [ ] Lista Duplamente Encadeada
 
 ## 💻 Pré-requisitos
 
