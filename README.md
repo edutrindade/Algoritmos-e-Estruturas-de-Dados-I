@@ -1,4 +1,5 @@
 # Algoritmos-e-Estruturas-de-Dados-I
+
 Conteúdo semestral de AEDS I
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
@@ -11,16 +12,16 @@ Conteúdo semestral de AEDS I
 
 O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Demais atualizações serão especificadas nas seguintes tarefas:
 
-- [x] Revisão
-- [x] Arquivos
-- [x] Ponteiros
-- [x] Alocação Estática e Dinâmica de Memória
-- [x] Lista
-- [x] Lista Encadeada
-- [x] Pilha
-- [x] Fila
-- [ ] Pilha com Ponteiro
-- [ ] Fila com Ponteiro
+- [X] Revisão
+- [X] Arquivos
+- [X] Ponteiros
+- [X] Alocação Estática e Dinâmica de Memória
+- [X] Lista
+- [X] Lista Encadeada
+- [X] Pilha
+- [X] Fila
+- [X] Pilha com Ponteiro
+- [X] Fila com Ponteiro
 - [ ] Fila de Prioridade
 - [ ] Fila Circular
 - [ ] Lista Duplamente Encadeada
@@ -28,7 +29,9 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+
 * Ter sido aprovado em Introdução à Programação.
 * Você instalou e configurou adequadamente o Ambiente de Desenvolvimento (compilador, editor de texto, etc.) `<MinGW / Visual Studio Code>`.
 * Ter os conhecimentos básicos necessários em `<Git / Github>`.
@@ -56,7 +59,9 @@ git clone https://github.com/edutrindade/Algoritmos-e-Estruturas-de-Dados-I
 ```
 
 ## 📫 Contribuindo para Algoritmos e Estruturas de Dados I
+
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+
 Para contribuir com Algoritmos-e-Estruturas-de-Dados-I, siga estas etapas:
 
 1. Bifurque este repositório.
@@ -116,13 +121,12 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
+## 😄 Seja um dos contribuidores`<br>`
 
-## 😄 Seja um dos contribuidores<br>
-
-Quer fazer parte desse projeto? Crie um branch com resoluções alternativas das questões, seguindo a mesma estrutura do projeto principal. Você irá aparecer aqui! 
+Quer fazer parte desse projeto? Crie um branch com resoluções alternativas das questões, seguindo a mesma estrutura do projeto principal. Você irá aparecer aqui!
 
 ## 📝 Licença
 
 Esse projeto é de uso livre para qualquer estudante de Algoritmos e amante de programação.
 
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
+[⬆ Voltar ao topo](#nome-do-projeto)`<br>`
