@@ -11,7 +11,7 @@
 4. Implemente uma fila circular dinâmica com suas TADs principais. Teste suas funções com a inserção em ordem
    dos seguintes valores.
 
-   ![1666177807155](image/readme/1666177807155.png)
+   1 -> 2 -> 3 -> 4 -> 5
 
    Utilize a referência abaixo (e outras que julgar necessário) para entender melhor seu funcionamento:
 
