@@ -22,9 +22,9 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 - [X] Fila
 - [X] Pilha com Ponteiro
 - [X] Fila com Ponteiro
-- [ ] Fila de Prioridade
-- [ ] Fila Circular
-- [ ] Lista Duplamente Encadeada
+- [X] Fila de Prioridade
+- [X] Fila Circular
+- [X] Lista Duplamente Encadeada
 
 ## 💻 Pré-requisitos
 
@@ -121,7 +121,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   </tr>
 </table>
 
-## 😄 Seja um dos contribuidores`<br>`
+## 😄 Seja um dos contribuidores `<br>`
 
 Quer fazer parte desse projeto? Crie um branch com resoluções alternativas das questões, seguindo a mesma estrutura do projeto principal. Você irá aparecer aqui!
 
@@ -129,4 +129,4 @@ Quer fazer parte desse projeto? Crie um branch com resoluções alternativas das
 
 Esse projeto é de uso livre para qualquer estudante de Algoritmos e amante de programação.
 
-[⬆ Voltar ao topo](#nome-do-projeto)`<br>`
+[⬆ Voltar ao topo](#nome-do-projeto) `<br>`
