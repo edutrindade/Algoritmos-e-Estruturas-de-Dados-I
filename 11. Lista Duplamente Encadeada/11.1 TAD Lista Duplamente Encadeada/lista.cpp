@@ -2,8 +2,6 @@
 #include <windows.h>
 #include "lista.hpp"
 
-#define MAXTAM 5
-
 using namespace std;
 
 void CriaListaVazia(TipoLista *lista)
