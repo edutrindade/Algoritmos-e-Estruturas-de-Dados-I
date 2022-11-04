@@ -30,7 +30,6 @@ bool VerificaListaVazia(TipoLista *lista);
 void InsereListaPrimeiro(TipoLista *lista, TipoItem *item);
 void InsereListaAposElemento(TipoLista *lista, TipoItem *item, int id);
 void InsereListaUltimo(TipoLista *lista, TipoItem *item);
-void AtualizaUltimo(TipoLista *lista);
 void ImprimeLista(TipoLista lista);
 int PesquisaItem(TipoLista *lista, int chave);
 void ImprimeItem(TipoLista *lista, int id);

@@ -49,17 +49,6 @@ void InsereListaPrimeiro(TipoLista *lista, TipoItem *item)
     lista->tamanho++;
 }
 
-void AtualizaUltimo(TipoLista *lista)
-{
-    Apontador aux;
-    aux = lista->primeiro;
-    while (aux->prox != NULL)
-    {
-        aux = aux->prox;
-    }
-    lista->ultimo = aux;
-}
-
 void InsereListaUltimo(TipoLista *lista, TipoItem *item)
 {
     Apontador aux = new TipoElemento;
