@@ -14,8 +14,8 @@ int main()
 
     t = clock() - t; // Registro do tempo final
 
-    cout << "Tempo em milissegundos: " << t << endl;               // Tempo em milissegundos
-    cout << "Tempo em segundos: " << (t) / CLOCKS_PER_SEC << endl; // Tempo em segundos
+    cout << "Tempo em milissegundos: " << t << endl;                      // Tempo em milissegundos
+    cout << "Tempo em segundos: " << ((float)t) / CLOCKS_PER_SEC << endl; // Tempo em segundos
 
     return 0;
 }
