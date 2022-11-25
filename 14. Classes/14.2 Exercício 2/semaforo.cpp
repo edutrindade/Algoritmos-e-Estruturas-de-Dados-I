@@ -105,6 +105,48 @@ int main()
 
     HANDLE colors = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(colors, 15);
+<<<<<<< HEAD
 
+=======
+    // cout << "\t________\n";
+    // Semaforo semaforo(1);
+    // semaforo.mostrarCor();
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // semaforo.mudarCor(4);
+    // semaforo.mostrarCor();
+    // cout << "\t|______|\n";
+    // semaforo.mudarCor(2);
+    // semaforo.mostrarCor();
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // semaforo.mudarCor(4);
+    // semaforo.mostrarCor();
+    // cout << "\t|______|\n";
+    // semaforo.mudarCor(3);
+    // semaforo.mostrarCor();
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // semaforo.mudarCor(4);
+    // semaforo.mostrarCor();
+    // cout << "\t|______|\n";
+
+    // cout << endl;
+
+    // cout << "\t________\n";
+    // Semaforo semaforo2(1);
+    // semaforo2.mostrarCor();
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // semaforo2.mudarCor(4);
+    // semaforo2.mostrarCor();
+    // cout << "\t|______|\n";
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // cout << "\t|______|\n";
+    // cout << "\t|######|\n";
+    // cout << "\t|######|\n";
+    // cout << "\t|______|\n";
+>>>>>>> 180469d5fc02fe06e8b61cda1458110b1be60dcb
     return 0;
 }
