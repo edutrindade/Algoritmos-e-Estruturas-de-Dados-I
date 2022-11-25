@@ -25,6 +25,7 @@ O projeto ainda está em desenvolvimento e visa atender à ementa do curso. Dema
 - [X] Fila de Prioridade
 - [X] Fila Circular
 - [X] Lista Duplamente Encadeada
+- [X] Classes
 
 ## 💻 Pré-requisitos
 
